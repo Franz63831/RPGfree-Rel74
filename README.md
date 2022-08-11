@@ -1,7 +1,7 @@
 # RPGfree-Rel74
 Neuerungen seit Release 7.4
 
-Demos für die neuen Funktionen:
+Beispiele für die neuen Funktionen:
 - %list
 - for-each
 - %range
