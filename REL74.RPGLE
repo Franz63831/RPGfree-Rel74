@@ -1,6 +1,6 @@
 **free
          // ---------------------------------------------------------------
-         // Neerungen RPGfree ab Rel 7.4
+         // Neuerungen RPGfree ab Rel 7.4
          // ---------------------------------------------------------------
 
          dcl-s users            char(10) dim(5);
@@ -35,7 +35,7 @@
 
          // %list und for-Each
          dsply '--------------for-each---------------';
-         users = %list ('QSECOFR': 'QUSR': 'XYZ');
+         users = %list ('ABC': 'CDE': 'QSECOFR': 'QUSR': 'XYZ');
          FOR-EACH item in users;
            Dsply item;
          ENDFOR;
@@ -43,6 +43,9 @@
          // neu ab Herbst 2021 %MAXARR und %MINARR
          dsply '--------------maxarr, minarr------------';
          item = users(%MAXARR(users));
+         dsply 'maxUser:';
+         dsply item;
+         item = users(%MINARR(users));
          dsply 'maxUser:';
          dsply item;
 
@@ -102,13 +105,13 @@
          SortArray(2).Name = 'Becker';
          SortArray(2).Ort  = 'Aachen';
          SortArray(2).Score= 22;
-         SortArray(3).Name = 'Cebula';
+         SortArray(3).Name = 'Cecilia';
          SortArray(3).Ort  = 'Ravensburg';
          SortArray(3).Score= 33;
-         SortArray(4).Name = 'Dödel';
+         SortArray(4).Name = 'Dieter';
          SortArray(4).Ort  = 'Dietzenbach';
          SortArray(4).Score= 44;
-         SortArray(5).Name = 'Englert';
+         SortArray(5).Name = 'Waldemar';
          SortArray(5).Ort  = 'Wächtersbach';
          SortArray(5).Score= 11;
 
@@ -222,6 +225,7 @@
 
 
            dsply '--------------on-Exit---------------';
+           dsply '-- Division durch 0 ! '
          // Fehler provozieren
            i   = 0;
            num = VaryArray(1) / i;
